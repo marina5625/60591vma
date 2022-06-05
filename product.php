@@ -1,5 +1,6 @@
 <?php
 //require('products_db.php');
+require('auth.php');
 require('dbconnect.php');
 require('components/header.php');
 
