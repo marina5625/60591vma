@@ -12,7 +12,7 @@
             <?php endfor; ?>
         </ol>
         <ul class="products-list">
-
+            <?php //foreach ($products_on_page as $i => $item):?>
             <?php while ($item = $result->fetch()) {?>
                 <li>
                     <a class="product-card"  href="product.php?product_id=<?= $item['id'] ?>">
@@ -21,7 +21,7 @@
                         <div class="product-options">
                             <span class="price"><?= $item['price'] ?></span>
                             <ul class="colors-list">
-                                <?php foreach (explode(',',$item['colors']) as $color): ?>
+                                <?php foreach (explode(',' ,$item['colors']) as $color): ?>
                                     <li class="color-<?= $color ?>"></li>
                                 <?php endforeach;?>
                             </ul>
