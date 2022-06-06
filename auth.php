@@ -5,6 +5,8 @@
         if ($row = $result->fetch()){
             if (md5($_POST['password']) == $row['password']){
                 $_SESSION['username'] = $_POST['login'];
+                $_SESSION['id_auth_user'] = $row['id'];
+                $_SESSION['admin'] = $row['is_admin'];
             }
             else {
                 $message = 'Неверный пароль';

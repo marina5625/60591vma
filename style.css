@@ -35,9 +35,6 @@ input, textarea, select{
   border-radius: 4px;
   cursor: pointer;
 }
-.error{
-  color: red;
-}
 
 a {
   text-decoration: none;
@@ -408,7 +405,7 @@ span.price:empty::after {
   cursor: default;
 }
 
-.banner{
+.banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -432,3 +429,8 @@ span.price:empty::after {
   text-align: center;
 }
 
+
+.error{
+  color: red;
+
+}

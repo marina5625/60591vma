@@ -2,7 +2,8 @@
 require('dbconnect.php');
 require('auth.php');
 require('components/header.php');
-if ($_SESSION['username']){
+
+if ($_SESSION['username'] and  $_SESSION['admin']){
     if ($_POST['title']){
         if ($_FILES && $_FILES["img_url"]["error"]== UPLOAD_ERR_OK)
         {
@@ -15,7 +16,7 @@ if ($_SESSION['username']){
     require('components/product_form.php');
 }
 else{
-    $_SESSION['message'] = 'Для добавления продукта войдите в систему';
+    $_SESSION['message'] = 'Для добавления продукта войдите в систему под администратором';
     header("Location: login.php");
     die();
 }

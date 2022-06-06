@@ -11,11 +11,13 @@ $row = $result->fetch();
 $title = $row['title'];
 $img_url = $row['img_url'];
 $price = $row['price'];
+$colors = $row['colors'];
 if ($is_violet_tuesday) {
     require('components/product_violet.php');
 }
 
 require('components/product_info.php');
+require ('components/message.php');
 require('components/footer.php');
 
 
